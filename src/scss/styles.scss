@@ -1,0 +1,112 @@
+@keyframes BgGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+@mixin bgcolor {
+    background: linear-gradient(1150deg, rgb(0, 255, 64), rgb(0, 217, 255), rgb(255, 128, 217));
+    background-size: 400% 300%;
+    animation: BgGradient 60s ease infinite;
+}
+
+.main {
+    font-family: 'Roboto';
+    width: 400px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+
+    .header {
+        @include bgcolor();
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-bottom-left-radius: 20%;
+        border-bottom-right-radius: 20%;
+
+        &-box-one {
+            text-align: center;
+        }
+
+        &-box-two {
+            background: #fff;
+            border-radius: 50px;
+            padding-left: 10px;
+
+            &-input,
+            .error,
+            .arreglo {
+                border: none;
+                padding: 8px;
+                margin: 6px;
+                border-radius: 6px;
+                outline: 0px;
+            }
+
+            &-button {
+                border: none;
+                background-color: transparent;
+                border-radius: 50%;
+                border: solid #000 2px;
+                padding: 6px 8px;
+                margin: 0 6px;
+                color: #000;
+                outline: 0px;
+            }
+
+            &-button:hover {
+                color: rgba(0, 0, 0, 0.4);
+                border: solid rgba(0, 0, 0, 0.4) 2px;
+
+            }
+        }
+    }
+
+    .container {
+        padding: 20px 40px;
+
+        &-card {
+            &-span {
+                border-bottom: solid rgba(0, 0, 0, 0.2) 1px;
+                padding-right: 180px;
+            }
+
+            &-ul {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+
+                &-li {
+                    margin: 4px;
+                    @include bgcolor();
+                    border-radius: 20px;
+                    list-style: none;
+                    padding: 10px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    &-div {
+                        & i {
+                            padding: 3px;
+                        }
+
+                        & i:hover {
+                            color: rgba(0, 0, 0, 0.4);
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

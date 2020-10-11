@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="icon" type="image/png" href="https://i.ibb.co/524tWtY/heart.jpg">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha38+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+
+    <!-- Roboto google font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Organizador de Tareas</title>
+</head>
+
+<body>
+
+    <!-- Ordenador de Tareas -->
+
+    <div class="main">
+        <header class="header">
+            <div class="header-box-one">
+                <h1 class="header-box-one-title" id="name"></h1>
+                <p class="header-box-one-p">Bienvenida al Organizador de Tareas</p>
+            </div>
+
+            <div class="header-box-two">
+                <input class="header-box-two-input error" id="tareaInput" placeholder="Agregar tarea" one-type="text" />
+
+                <button class="header-box-two-button" type="button" id="plus-button">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="container-card">
+                <span class="container-card-span">
+                    Tareas Pendientes
+                </span>
+
+                <ul class="container-card-ul" id="lista">
+                </ul>
+            </div>
+
+            <div class="container-card">
+                <span class="container-card-span">
+                    Tareas Finalizadas
+                </span>
+
+                <ul class="container-card-ul" id="finalizadas">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
